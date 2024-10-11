@@ -10,49 +10,38 @@ public class TestObjetoInteract : MonoBehaviour
 
     private void Awake()
     {
-        m_Interact = GetComponent<XRSimpleInteractable>();
-        if(m_Interact) m_Interact.selectEntered.AddListener(CambiaColor);
+        /*m_Interact = GetComponent<XRSimpleInteractable>();
+        if(m_Interact) m_Interact.selectEntered.AddListener(CambiaColor);*/
 
         m_Grab = GetComponent<XRGrabInteractable>();
         if (m_Grab) m_Grab.selectEntered.AddListener(CambiaTamanio);
+        if (m_Grab) m_Grab.selectExited.AddListener(CambiaTamanioExit);
+    }
+
+    private void CambiaTamanioExit(SelectExitEventArgs arg0)
+    {
+        /*print("ExitCreciendo2");
+        transform.localScale = new Vector3(2, 2, 2);*/
     }
 
     private void CambiaTamanio(SelectEnterEventArgs arg0)
     {
         print("Creciendo2");
-        GetComponent<MeshRenderer>()?.material.SetColor("_Color", Color.red);
-        transform.localScale *= 1.98f;
+        transform.localScale *= 1.01f;
     }
-
-    private void CambiaColor(SelectEnterEventArgs _)
-    {
-        print("Creciendo1");
-        GetComponent<MeshRenderer>()?.material.SetColor("_Color", Color.red);
-        transform.localScale *= 1.98f;
-    }
-
     private void OnDestroy()
     {
-        m_Interact.selectEntered.RemoveListener(CambiaColor);
+        //m_Interact.selectEntered.RemoveListener(CambiaColor);
         m_Grab.selectEntered.RemoveListener(CambiaTamanio);
     }
-
-    private void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-       
-    }
-    private void FixedUpdate()
-    {
-        if (m_Grab.isSelected)
-        {
-          
-            
-        }
-
-        /*if (m_Grab.isHovered)
-        {
-            print("menguando");
-            transform.GetChild(0).localScale *= 0.98f;
-        }*/
+        print("COL");
+        Debug.Log(GetComponent<Rigidbody>().linearVelocity.magnitude);
+        if (GetComponent<Rigidbody>().linearVelocity.magnitude > 0.5)
+            Destroy(gameObject);
+        if (collision.gameObject.GetComponent<Rigidbody>() != null)
+            if (collision.gameObject.GetComponent<Rigidbody>()?.linearVelocity.magnitude > 0.5 )
+                Destroy(gameObject);
     }
 }
