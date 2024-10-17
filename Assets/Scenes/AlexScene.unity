@@ -2510,17 +2510,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f04c6811f3339f4cb70eb108b58efc1, type: 3}
---- !u!114 &580438289 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2471992356085222067, guid: 4f04c6811f3339f4cb70eb108b58efc1, type: 3}
-  m_PrefabInstance: {fileID: 580438288}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e7e22e4bb53ed47895bed77d58e2ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &636564377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,17 +6011,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f73aef81005e147b2752f3e2c57b1c, type: 3}
---- !u!114 &1837758822 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2302049700348263485, guid: 82f73aef81005e147b2752f3e2c57b1c, type: 3}
-  m_PrefabInstance: {fileID: 1837758821}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d4dcf1670fbe444083518bd3a421264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1871050289
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,6 +6522,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974796867}
   m_CullTransparentMesh: 0
+--- !u!1001 &1997446491
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4329983307788536588, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_Name
+      value: BolHuevos
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.9631553
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2236512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.2011878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550783510684049971, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16dca92a27fdd4c448a2fbf55a2b1ce1, type: 3}
 --- !u!4 &2017971287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265591517430562514, guid: 0a943415bd786fc47899556889aa9cfa, type: 3}
@@ -6693,29 +6728,53 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[0].tiempoEjecucion
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[1].tiempoEjecucion
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: mRecetas.Array.data[0].ingredienteResultante
       value: 
       objectReference: {fileID: 3628479241336451464, guid: 22b3e30ddeebe91449bcb4ed2cf939a5, type: 3}
     - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: mRecetas.Array.data[1].ingredientes.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: 'mRecetas.Array.data[0].ingredientes.Array.data[0]'
       value: 
-      objectReference: {fileID: 1837758822}
+      objectReference: {fileID: 11400000, guid: db154917af661e644ac8d0f854b4714c, type: 2}
     - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: 'mRecetas.Array.data[0].ingredientes.Array.data[1]'
       value: 
-      objectReference: {fileID: 580438289}
+      objectReference: {fileID: 11400000, guid: 5f39f955e4e1c094ca4e88d0d076e7e6, type: 2}
     - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: 'mRecetas.Array.data[1].ingredientes.Array.data[0]'
       value: 
-      objectReference: {fileID: 1837758822}
+      objectReference: {fileID: 11400000, guid: abac87339ae5c7a4d97a4669367b3d33, type: 2}
     - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: 'mRecetas.Array.data[1].ingredientes.Array.data[1]'
       value: 
-      objectReference: {fileID: 580438289}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[0].ingredientes.Array.data[0].cantidad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[0].ingredientes.Array.data[1].cantidad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[0].ingredientes.Array.data[0].ingrediente
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[0].ingredientes.Array.data[1].ingrediente
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5755824866439654012, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: m_Name
       value: microwave
@@ -6999,3 +7058,4 @@ SceneRoots:
   - {fileID: 347930260}
   - {fileID: 563560838}
   - {fileID: 1268130033}
+  - {fileID: 1997446491}

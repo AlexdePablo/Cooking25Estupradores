@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 231775969751182676}
   - component: {fileID: 1469415526596930185}
   - component: {fileID: 7113419714540726149}
-  - component: {fileID: 30295601365256086}
   - component: {fileID: 19305266366709835}
+  - component: {fileID: 6036943524188196540}
   m_Layer: 3
   m_Name: MariaHoja
   m_TagString: Untagged
@@ -138,18 +138,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &30295601365256086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123826414653903569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5d1f3b25d7fbf54b9276e8d0e31d8ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &19305266366709835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +260,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &6036943524188196540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123826414653903569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mIngrediente: 6

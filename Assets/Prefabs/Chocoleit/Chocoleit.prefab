@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7291972436587454697}
   - component: {fileID: 6950125072474736416}
   - component: {fileID: 7995004612291803146}
-  - component: {fileID: 2302049700348263485}
   - component: {fileID: 7035028973557007116}
   - component: {fileID: 5906684994120208228}
   - component: {fileID: 410217610124229197}
+  - component: {fileID: 5481772940846351892}
   m_Layer: 3
   m_Name: Chocoleit
   m_TagString: Untagged
@@ -90,18 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2302049700348263485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821438193320683752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d4dcf1670fbe444083518bd3a421264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &7035028973557007116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -272,3 +260,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &5481772940846351892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821438193320683752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mIngrediente: 0
