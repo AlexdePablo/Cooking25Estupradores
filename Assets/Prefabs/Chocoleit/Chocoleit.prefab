@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7291972436587454697}
   - component: {fileID: 6950125072474736416}
   - component: {fileID: 7995004612291803146}
+  - component: {fileID: 2302049700348263485}
   m_Layer: 0
   m_Name: Chocoleit
   m_TagString: Untagged
@@ -86,3 +87,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2302049700348263485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821438193320683752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4dcf1670fbe444083518bd3a421264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
