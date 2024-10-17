@@ -2510,6 +2510,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f04c6811f3339f4cb70eb108b58efc1, type: 3}
+--- !u!114 &580438289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2471992356085222067, guid: 4f04c6811f3339f4cb70eb108b58efc1, type: 3}
+  m_PrefabInstance: {fileID: 580438288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e7e22e4bb53ed47895bed77d58e2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &636564377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,7 +2825,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831334625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40144c03458900342a41f717f2d1a250, type: 3}
   m_Name: 
@@ -6011,6 +6022,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f73aef81005e147b2752f3e2c57b1c, type: 3}
+--- !u!114 &1837758822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2302049700348263485, guid: 82f73aef81005e147b2752f3e2c57b1c, type: 3}
+  m_PrefabInstance: {fileID: 1837758821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4dcf1670fbe444083518bd3a421264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1871050289
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,14 +6684,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1268130033}
     m_Modifications:
-    - target: {fileID: 905853319527100502, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
-      propertyPath: m_TagString
-      value: calentadorMicroondas
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.size
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2863036036669066950, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[1].tiempoCoccion
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[0].ingredienteResultante
+      value: 
+      objectReference: {fileID: 3628479241336451464, guid: 22b3e30ddeebe91449bcb4ed2cf939a5, type: 3}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: mRecetas.Array.data[1].ingredientes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: 'mRecetas.Array.data[0].ingredientes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1837758822}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: 'mRecetas.Array.data[0].ingredientes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 580438289}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: 'mRecetas.Array.data[1].ingredientes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1837758822}
+    - target: {fileID: 2511781441633871051, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
+      propertyPath: 'mRecetas.Array.data[1].ingredientes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 580438289}
     - target: {fileID: 5755824866439654012, guid: 8bc0e6e9ba5106b4db6f5212fd4a583f, type: 3}
       propertyPath: m_Name
       value: microwave
