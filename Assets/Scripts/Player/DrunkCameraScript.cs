@@ -4,17 +4,22 @@ using UnityEngine;
 public class DrunkCameraScript : MonoBehaviour
 {
     [Header("Rango de Rotacion")]
-    public float RangoRotacion;
+    public float RangoRotacionY;
+    public float RangoRotacionZ;
 
     private float RotacionY;
     private float RotacionZ;
 
-    [Header("Velocidades")]
-    public float MinimoVelocidadRotacion;
-    public float MaximoVelocidadRotacion;
+    [Header("Velocidades Y")]
+    public float MinimoVelocidadRotacionY;
+    public float MaximoVelocidadRotacionY;
 
-    public float VelocidadRotacionY;
-    public float VelocidadRotacionZ;
+    [Header("Velocidades Z")]
+    public float MinimoVelocidadRotacionZ;
+    public float MaximoVelocidadRotacionZ;
+
+    private float VelocidadRotacionY;
+    private float VelocidadRotacionZ;
 
     private bool rotatingLeft = true;
     private bool rotatingUp = true;
@@ -39,9 +44,9 @@ public class DrunkCameraScript : MonoBehaviour
         {
             RotacionZ += VelocidadRotacionZ * Time.deltaTime;
 
-            if (RotacionZ >= RangoRotacion)
+            if (RotacionZ >= RangoRotacionZ)
             {
-                RotacionZ = RangoRotacion;
+                RotacionZ = RangoRotacionZ;
                 rotatingUp = false;
                 CambiarVelocidadZ();
             }
@@ -50,9 +55,9 @@ public class DrunkCameraScript : MonoBehaviour
         {
             RotacionZ -= VelocidadRotacionZ * Time.deltaTime;
 
-            if (RotacionZ <= -RangoRotacion)
+            if (RotacionZ <= -RangoRotacionZ)
             {
-                RotacionZ = -RangoRotacion;
+                RotacionZ = -RangoRotacionZ;
                 rotatingUp = true;
                 CambiarVelocidadZ();
             }
@@ -65,9 +70,9 @@ public class DrunkCameraScript : MonoBehaviour
         {
             RotacionY += VelocidadRotacionY * Time.deltaTime;
 
-            if (RotacionY >= RangoRotacion)
+            if (RotacionY >= RangoRotacionY)
             {
-                RotacionY = RangoRotacion;
+                RotacionY = RangoRotacionY;
                 rotatingLeft = false;
                 CambiarVelocidadY();
             }
@@ -76,9 +81,9 @@ public class DrunkCameraScript : MonoBehaviour
         {
             RotacionY -= VelocidadRotacionY * Time.deltaTime;
 
-            if (RotacionY <= -RangoRotacion)
+            if (RotacionY <= -RangoRotacionY)
             {
-                RotacionY = -RangoRotacion;
+                RotacionY = -RangoRotacionY;
                 rotatingLeft = true;
                 CambiarVelocidadY();
             }
@@ -87,11 +92,11 @@ public class DrunkCameraScript : MonoBehaviour
 
     private void CambiarVelocidadY()
     {
-        VelocidadRotacionY = UnityEngine.Random.Range(MinimoVelocidadRotacion, MaximoVelocidadRotacion);
+        VelocidadRotacionY = UnityEngine.Random.Range(MinimoVelocidadRotacionY, MaximoVelocidadRotacionY);
     }
 
     private void CambiarVelocidadZ()
     {
-        VelocidadRotacionZ = UnityEngine.Random.Range(MinimoVelocidadRotacion, MaximoVelocidadRotacion);
+        VelocidadRotacionZ = UnityEngine.Random.Range(MinimoVelocidadRotacionZ, MaximoVelocidadRotacionZ);
     }
 }
