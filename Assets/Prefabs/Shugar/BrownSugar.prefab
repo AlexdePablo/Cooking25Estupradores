@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1076318275385720896}
   - component: {fileID: 3504533893627768969}
   - component: {fileID: 6390095136060933246}
-  - component: {fileID: 3279716520530227789}
   - component: {fileID: 6036384627644074788}
   - component: {fileID: 21862858924186425}
   - component: {fileID: -105551049806688685}
+  - component: {fileID: 4600383417257780355}
   m_Layer: 3
   m_Name: BrownSugar
   m_TagString: Untagged
@@ -90,18 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3279716520530227789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6834043178945908919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 177f3d18a581c6e4296225f7ce3cf8d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &6036384627644074788
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -273,3 +261,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &4600383417257780355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6834043178945908919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mIngrediente: 3

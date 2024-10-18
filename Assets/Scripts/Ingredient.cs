@@ -1,12 +1,42 @@
+using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace Logic
 {
-    public abstract class Ingredient : MonoBehaviour
+    public class Ingredient : MonoBehaviour
     {
-        internal Ingredientes m_Ingredient;
-        public Ingredientes Ingrediente => m_Ingredient;
+        [SerializeField] protected Ingredientes mIngrediente;
+        public Ingredientes eIngrediente => mIngrediente;
+        private int mTimeCooked = 0;
+        public int timeCooked => mTimeCooked;
+
+        public void Cocinate()
+        {
+            mTimeCooked++;
+            print("Cooking " + mIngrediente.ToString());
+        }
     }
-    public enum Ingredientes { CHOCOLEIT, BATER, HEROIN, SHUGAR, ECS, SAL, MARIA }
+
+    [Serializable]
+    public struct Receta
+    {
+        public List<IngredientRecetaSO> ingredientes;
+        public float tiempoEjecucion;
+        public GameObject ingredienteResultante;
+    }
+    [Serializable]
+    public struct IngredienteCantidad
+    {
+        public Ingredient ingrediente;
+        public int cantidad;
+
+        public IngredienteCantidad(Ingredient _i, int _c)
+        {
+            ingrediente = _i;
+            cantidad = _c;
+        }
+    }
+    public enum Ingredientes { CHOCOLEIT, BATER, HEROIN, SHUGAR, ECS, SAL, MARIA, CHOCOLEIT_TEMPLADO, BROWNIE_CRUDO }
    
 }

@@ -25,7 +25,7 @@ public class PlatoBuenoScript : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Ingredient>(out Ingredient ingrediente))
         {
-            if (ingrediente.Ingrediente == mIngredient[mIngredienteActual].Ingrediente)
+            if (ingrediente.eIngrediente == mIngredient[mIngredienteActual].eIngrediente)
             {
                 if (mIngredienteActual == 0)
                 {

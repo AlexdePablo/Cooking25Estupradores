@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8908549717471006683}
   - component: {fileID: 4639960914960365558}
   - component: {fileID: 3208970767201990004}
-  - component: {fileID: 5960103013174460603}
+  - component: {fileID: 4504920926199289780}
   m_Layer: 3
   m_Name: Heroin
   m_TagString: Untagged
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &5960103013174460603
+--- !u!114 &4504920926199289780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,6 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071739963768887349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2698f3d046207a4195d0cb1e6e41536, type: 3}
+  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mIngrediente: 2

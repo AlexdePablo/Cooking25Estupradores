@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2612656460586928662}
   - component: {fileID: 4551333409831536698}
   - component: {fileID: 9169196686995999557}
-  - component: {fileID: 2471992356085222067}
   - component: {fileID: -4227394312422038608}
+  - component: {fileID: 1332563975376844667}
   m_Layer: 3
   m_Name: Bater
   m_TagString: Untagged
@@ -138,18 +138,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.3331347, y: 1.4230231, z: 2.8333118}
   m_Center: {x: -0.009799838, y: 0, z: 0}
---- !u!114 &2471992356085222067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3245315046545738421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e7e22e4bb53ed47895bed77d58e2ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-4227394312422038608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +260,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &1332563975376844667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245315046545738421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mIngrediente: 1

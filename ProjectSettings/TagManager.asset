@@ -6,6 +6,7 @@ TagManager:
   tags:
   - puertaMicroondas
   - calentadorMicroondas
+  - batidor
   layers:
   - Default
   - TransparentFX

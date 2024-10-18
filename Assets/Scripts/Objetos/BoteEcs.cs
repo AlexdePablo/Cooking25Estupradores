@@ -1,17 +1,29 @@
+using Logic;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BoteEcs : MonoBehaviour
+public class BoteEcs : FusionadorDeIngredientes
 {
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.TryGetComponent(out Ingredient ingrediente))
+        {
+            if (EstaElIngrediente(ingrediente.eIngrediente))
+            {
+                AumentarCantidadDeDentro(ingrediente);
+            }
+            else
+            {
+                mIngredientesDentro.Add(new IngredienteCantidad(ingrediente, 1));
+            }
+            
+            mRecetaActual = EncontrarReceta();
+            
+        }
+        if(other.CompareTag("batidor"))
+        {
+            if (mRecetaActual != -1)
+                Cocinar();
+        }
     }
 }

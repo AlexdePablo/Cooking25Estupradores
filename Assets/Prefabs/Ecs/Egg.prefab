@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5599756533416106804}
   - component: {fileID: 7777757359664784459}
   - component: {fileID: 4940887140868723760}
-  - component: {fileID: 5833444308563129688}
   - component: {fileID: 5071133203349034862}
+  - component: {fileID: 3347525033117687569}
   m_Layer: 3
   m_Name: Egg
   m_TagString: Untagged
@@ -139,18 +139,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5833444308563129688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5012719684493666326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62655e8242e3663448be741d32ae44d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5071133203349034862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +261,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &3347525033117687569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012719684493666326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mIngrediente: 4
