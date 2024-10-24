@@ -6,6 +6,7 @@ public class BoteEcs : FusionadorDeIngredientes
 {
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.TryGetComponent(out Ingredient ingrediente))
         {
             if (EstaElIngrediente(ingrediente.eIngrediente))
@@ -16,14 +17,24 @@ public class BoteEcs : FusionadorDeIngredientes
             {
                 mIngredientesDentro.Add(new IngredienteCantidad(ingrediente, 1));
             }
-            
+
             mRecetaActual = EncontrarReceta();
-            
+
         }
-        if(other.CompareTag("batidor"))
+        if (mRecetaActual != -1)
         {
-            if (mRecetaActual != -1)
-                Cocinar();
+            mTrabajando = true;
+            Cocinar();
+        }
+    }
+
+    private void OnDisable()
+    {
+        mIngredientesDentro.Clear();
+        if (mCoroutineCooking != null)
+        {
+            mTrabajando = false;
+            StopCoroutine(mCoroutineCooking);
         }
     }
 }
