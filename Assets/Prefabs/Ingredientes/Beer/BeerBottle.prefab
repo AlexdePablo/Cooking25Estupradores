@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8092248534129916308}
   - component: {fileID: 159523638681183289}
   - component: {fileID: 1669832741242421149}
-  - component: {fileID: 6251130662884550053}
+  - component: {fileID: 275655526399559980}
   m_Layer: 0
   m_Name: BeerBottle
   m_TagString: Beer
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!136 &6251130662884550053
-CapsuleCollider:
+--- !u!65 &275655526399559980
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -269,8 +269,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.5975529
-  m_Height: 12.171374
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 3.1951058, y: 12.171374, z: 3.1569295}
   m_Center: {x: 0, y: 0, z: 0}
