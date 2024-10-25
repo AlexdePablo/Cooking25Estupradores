@@ -120,6 +120,7 @@ public class DrunkCameraScript : MonoBehaviour
                 StopAllCoroutines();
                 mCoroutine = StartCoroutine(GetDrunked());
             }
+            other.GetComponent<Pooleable>().ReturnToPool();
         }
     }
     private IEnumerator GetDrunked()
