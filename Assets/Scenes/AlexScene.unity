@@ -11489,9 +11489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5e33e04db4ea944bc8e50fb09d27a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mRecetas: []
-  mIngredientesDentro: []
-  mRecetaActual: 0
   mIngredient:
   - {fileID: 0}
   - {fileID: 2302049700348263485, guid: 82f73aef81005e147b2752f3e2c57b1c, type: 3}

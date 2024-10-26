@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5481772940846351892}
   - component: {fileID: -7574715606497561498}
   m_Layer: 3
-  m_Name: Chocoleit
+  m_Name: ChocoleitImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f83fa20db4f127243abfeecee0f90e69, type: 2}
+  - {fileID: 2100000, guid: fbfb0b116354bd742951ca117b50822a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
