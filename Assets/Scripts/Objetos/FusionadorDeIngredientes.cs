@@ -95,7 +95,10 @@ public class FusionadorDeIngredientes : MonoBehaviour
     {
         for (int i = mIngredientesDentro.Count - 1; i >= 0; i--)
         {
-            Destroy(mIngredientesDentro[i].ingrediente.gameObject);
+            if (mIngredientesDentro[i].ingrediente.gameObject.TryGetComponent<Pooleable>(out Pooleable pooleable))
+                pooleable.ReturnToPool();
+            else
+                Destroy(mIngredientesDentro[i].ingrediente.gameObject);
         }
 
         GameObject cooked = Instantiate(mRecetas[mRecetaActual].ingredienteResultante);

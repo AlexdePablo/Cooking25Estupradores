@@ -27,7 +27,12 @@ public class DrunkCameraScript : MonoBehaviour
 
     private bool mDrunked;
     [SerializeField] private int mTimeDrunked;
-    private Coroutine mCoroutine;
+    [SerializeField] private int mTimeMarihuaned;
+
+    private Coroutine mCoroutineDrunked;
+    private Coroutine mCoroutineMarihuaned;
+
+    public Action<bool> onMarihuanedBehavioured; 
 
     private void Start()
     {
@@ -110,20 +115,38 @@ public class DrunkCameraScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-	print(other.tag);
         if (other.CompareTag("Beer"))
         {
             mDrunked = true;
-            if (mCoroutine == null)
-                mCoroutine = StartCoroutine(GetDrunked());
+            if (mCoroutineDrunked == null)
+                mCoroutineDrunked = StartCoroutine(GetDrunked());
             else
             {
-                StopAllCoroutines();
-                mCoroutine = StartCoroutine(GetDrunked());
+                StopCoroutine(mCoroutineDrunked);
+                mCoroutineDrunked = StartCoroutine(GetDrunked());
             }
             other.GetComponent<Pooleable>().ReturnToPool();
         }
+
+        if (other.CompareTag("BrownieMarihuana"))
+        {
+            onMarihuanedBehavioured?.Invoke(true);
+            if (mCoroutineMarihuaned == null)
+                mCoroutineMarihuaned = StartCoroutine(GetMarihuaned());
+            else
+            {
+                StopCoroutine(mCoroutineMarihuaned);
+                mCoroutineMarihuaned = StartCoroutine(GetMarihuaned());
+            }
+        }
     }
+
+    private IEnumerator GetMarihuaned()
+    {
+        yield return new WaitForSeconds(mTimeMarihuaned);
+        onMarihuanedBehavioured?.Invoke(false);
+    }
+
     private IEnumerator GetDrunked()
     {
         yield return new WaitForSeconds(mTimeDrunked);
