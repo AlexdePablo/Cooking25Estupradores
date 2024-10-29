@@ -44,6 +44,6 @@ namespace Logic
             cantidad = _c;
         }
     }
-    public enum Ingredientes { CHOCOLEIT, BATER, HEROIN, SHUGAR, ECS, SAL, MARIA, CHOCOLEIT_TEMPLADO, BROWNIE_CRUDO }
+    public enum Ingredientes { CHOCOLEIT, BATER, HEROIN, SHUGAR, ECS, SAL, MARIA, CHOCOLEIT_TEMPLADO, BROWNIE_CRUDO, BROWNIE, HUEBOS_BAT }
    
 }
