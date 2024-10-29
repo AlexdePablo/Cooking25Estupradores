@@ -43,7 +43,7 @@ public class DrunkCameraScript : MonoBehaviour
             UpdateY();
             UpdateZ();
 
-            transform.localRotation = Quaternion.Euler(0f, RotacionY, RotacionZ);
+            transform.parent.localRotation = Quaternion.Euler(0f, RotacionY, RotacionZ);
         }
     }
 
@@ -110,6 +110,7 @@ public class DrunkCameraScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+	print(other.tag);
         if (other.CompareTag("Beer"))
         {
             mDrunked = true;
