@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class DrunkCameraScript : MonoBehaviour
@@ -24,18 +25,26 @@ public class DrunkCameraScript : MonoBehaviour
     private bool rotatingLeft = true;
     private bool rotatingUp = true;
 
+    private bool mDrunked;
+    [SerializeField] private int mTimeDrunked;
+    private Coroutine mCoroutine;
+
     private void Start()
     {
+        mDrunked = false;
         CambiarVelocidadY();
         CambiarVelocidadZ();
     }
 
     void Update()
     {
-        UpdateY();
-        UpdateZ();
-        
-        transform.localRotation = Quaternion.Euler(0f, RotacionY, RotacionZ);
+        if (mDrunked)
+        {
+            UpdateY();
+            UpdateZ();
+
+            transform.localRotation = Quaternion.Euler(0f, RotacionY, RotacionZ);
+        }
     }
 
     private void UpdateZ()
@@ -98,5 +107,31 @@ public class DrunkCameraScript : MonoBehaviour
     private void CambiarVelocidadZ()
     {
         VelocidadRotacionZ = UnityEngine.Random.Range(MinimoVelocidadRotacionZ, MaximoVelocidadRotacionZ);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Beer"))
+        {
+            mDrunked = true;
+            if (mCoroutine == null)
+                mCoroutine = StartCoroutine(GetDrunked());
+            else
+            {
+                StopAllCoroutines();
+                mCoroutine = StartCoroutine(GetDrunked());
+            }
+            other.GetComponent<Pooleable>().ReturnToPool();
+        }
+    }
+    private IEnumerator GetDrunked()
+    {
+        yield return new WaitForSeconds(mTimeDrunked);
+        mDrunked = false;
+        ResetCameraCameraRotation();
+    }
+
+    private void ResetCameraCameraRotation()
+    {
+        transform.localEulerAngles = Vector3.zero;
     }
 }

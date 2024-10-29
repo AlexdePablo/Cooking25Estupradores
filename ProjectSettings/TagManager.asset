@@ -7,6 +7,8 @@ TagManager:
   - puertaMicroondas
   - calentadorMicroondas
   - batidor
+  - Beer
+  - BrownieMarihuana
   layers:
   - Default
   - TransparentFX
