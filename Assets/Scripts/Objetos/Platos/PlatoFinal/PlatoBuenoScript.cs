@@ -6,10 +6,14 @@ using UnityEngine;
 
 public class PlatoBuenoScript : MonoBehaviour
 {
-    [SerializeField] private List<Ingredient> mIngredient;
     [SerializeField] private GameObject mBrownieCrudo;
+    private GameObject mBrownieCrudoRefe;
     [SerializeField] private GameObject mBrownieMierda;
+    private GameObject mBrownieMierdaRefe;
     [SerializeField] private GameObject mBrownieMaking;
+    private GameObject mBrownieMakingRefe;
+
+    [SerializeField] protected RecetaFinal mRecetaFinal;
 
     public Action onFalloCocina;
 
@@ -25,28 +29,38 @@ public class PlatoBuenoScript : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Ingredient>(out Ingredient ingrediente))
         {
-            if (ingrediente.eIngrediente == mIngredient[mIngredienteActual].eIngrediente)
+            if (ingrediente.eIngrediente == mRecetaFinal.ingredientes[mIngredienteActual].eIngredient)
             {
                 if (mIngredienteActual == 0)
                 {
                     print("empezamos");
-                    GameObject brownieMaking = Instantiate(mBrownieMaking);
-                    brownieMaking.GetComponent<BrownieMakingScript>().PasarPlato(gameObject);
-                    brownieMaking.transform.position = transform.position;
-                    Destroy(other.gameObject);
+                    mBrownieMakingRefe = Instantiate(mBrownieMaking);
+                    mBrownieMakingRefe.GetComponent<BrownieMakingScript>().PasarPlato(gameObject);
+                    mBrownieMakingRefe.transform.position = transform.position;
+                    if(TryGetComponent<Pooleable>(out Pooleable pooleable))
+                        pooleable.ReturnToPool();
+                    else
+                        Destroy(other.gameObject);
+
                     mIngredienteActual++;
                 }
-                if (mIngredienteActual == mIngredient.Count - 1)
+                if (mIngredienteActual == mRecetaFinal.ingredientes.Count - 1)
                 {
                     print("Sacabo");
-                    Destroy(other.gameObject);
+                    if (TryGetComponent<Pooleable>(out Pooleable pooleable))
+                        pooleable.ReturnToPool();
+                    else
+                        Destroy(other.gameObject);
                     mIngredienteActual = 0;
                     onFalloCocina?.Invoke();
                 }
                 else
                 {
                     print("Crece");
-                    Destroy(other.gameObject);
+                    if (TryGetComponent<Pooleable>(out Pooleable pooleable))
+                        pooleable.ReturnToPool();
+                    else
+                        Destroy(other.gameObject);
                     mIngredienteActual++;
                 }
             }
@@ -54,8 +68,13 @@ public class PlatoBuenoScript : MonoBehaviour
             {
                 mIngredienteActual = 0;
                 print("Cagaste");
-                Destroy(other.gameObject);
+                if (TryGetComponent<Pooleable>(out Pooleable pooleable))
+                    pooleable.ReturnToPool();
+                else
+                    Destroy(other.gameObject);
                 onFalloCocina?.Invoke();
+                GameObject mielda = Instantiate(mBrownieMierda);
+                mielda.transform.position = transform.position;
             }
         }
     }

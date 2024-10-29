@@ -26,6 +26,13 @@ namespace Logic
         public GameObject ingredienteResultante;
     }
     [Serializable]
+    public struct RecetaFinal
+    {
+        public List<IngredientRecetaSO> ingredientes;
+        public GameObject ingredienteResultante;
+    }
+
+    [Serializable]
     public struct IngredienteCantidad
     {
         public Ingredient ingrediente;
