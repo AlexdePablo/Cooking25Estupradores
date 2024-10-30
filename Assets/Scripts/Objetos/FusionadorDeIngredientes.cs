@@ -8,6 +8,7 @@ public class FusionadorDeIngredientes : MonoBehaviour
 {
     [SerializeField] protected List<Receta> mRecetas;
     [SerializeField] protected List<IngredienteCantidad> mIngredientesDentro;
+    [SerializeField] protected List<GameObject> mIngredienteDentroPorSeparado;
     public int mRecetaActual;
     protected bool mTrabajando;
     protected Coroutine mCoroutineCooking;
@@ -93,12 +94,12 @@ public class FusionadorDeIngredientes : MonoBehaviour
     }
     protected void RecetaAcabada()
     {
-        for (int i = mIngredientesDentro.Count - 1; i >= 0; i--)
+        for (int i = mIngredienteDentroPorSeparado.Count - 1; i >= 0; i--)
         {
-            if (mIngredientesDentro[i].ingrediente.gameObject.TryGetComponent<Pooleable>(out Pooleable pooleable))
+            if (mIngredienteDentroPorSeparado[i].TryGetComponent<Pooleable>(out Pooleable pooleable))
                 pooleable.ReturnToPool();
             else
-                Destroy(mIngredientesDentro[i].ingrediente.gameObject);
+                Destroy(mIngredienteDentroPorSeparado[i]);
         }
 
         GameObject cooked = Instantiate(mRecetas[mRecetaActual].ingredienteResultante);

@@ -11,7 +11,13 @@ public class ImaginariumScript : MonoBehaviour
     [SerializeField] private int mNumeroIngredientesSpawn;
     private List<GameObject> mObjetosInvisibles = new();
 
-
+    [Header("Transform de los platos")]
+    [SerializeField] private Transform mPlatoHeroin;
+    [SerializeField] private Transform mPlatoChocoleit;
+    [SerializeField] private Transform mPlatoShugar;
+    [SerializeField] private Transform mPlatoEcs;
+    [SerializeField] private Transform mPlatoBater;
+    [SerializeField] private Transform mPlatoSalt;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,7 +53,31 @@ public class ImaginariumScript : MonoBehaviour
         for(int i = 0; i < mNumeroIngredientesSpawn; i++)
         {
             GameObject ingrediente = Instantiate(mImaginariosPrefab[Random.Range(0, mImaginariosPrefab.Count)], transform);
-            transform.position = new Vector3(Random.Range(0, 4f), 4, Random.Range(0, 4f));
+            switch(ingrediente.GetComponent<IngredientImaginario>().IngredienteEnum)
+            {
+                case Logic.Ingredientes.CHOCOLEIT:
+                    ingrediente.transform.position = mPlatoChocoleit.position;
+                    break;
+                case Logic.Ingredientes.HEROIN:
+                    ingrediente.transform.position = mPlatoHeroin.position;
+                    break;
+                case Logic.Ingredientes.BATER:
+                    ingrediente.transform.position = mPlatoBater.position;
+                    break;
+                case Logic.Ingredientes.ECS:
+                    ingrediente.transform.position = mPlatoEcs.position;
+                    break;
+                case Logic.Ingredientes.SAL:
+                    ingrediente.transform.position = mPlatoSalt.position;
+                    break;
+                case Logic.Ingredientes.SHUGAR:
+                    ingrediente.transform.position = mPlatoShugar.position;
+                    break;
+                default:
+                    print("AAAAAA");
+                    break;
+            }
+            
             mObjetosInvisibles.Add(ingrediente);
         }
 
@@ -56,11 +86,17 @@ public class ImaginariumScript : MonoBehaviour
 
     private void GetAlimentsVisible()
     {
-                
+        for (int i = 0; i < mObjetosInvisibles.Count; i++)
+        {
+            mObjetosInvisibles[i].GetComponent<IngredientImaginario>().MakeVisible(); 
+        }
     }
 
     private void DespawnInvisibles()
     {
-        
+        for (int i = 0; i < mObjetosInvisibles.Count; i++)
+        {
+            mObjetosInvisibles[i].GetComponent<IngredientImaginario>().MakeInvisible();
+        }
     }
 }

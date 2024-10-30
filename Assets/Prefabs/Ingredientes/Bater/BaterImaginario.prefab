@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 4551333409831536698}
   - component: {fileID: 9169196686995999557}
   - component: {fileID: -4227394312422038608}
-  - component: {fileID: 1332563975376844667}
-  - component: {fileID: 4716154404261189461}
+  - component: {fileID: 1697749859882126588}
   m_Layer: 3
   m_Name: BaterImaginario
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: 1}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -261,7 +260,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &1332563975376844667
+--- !u!114 &1697749859882126588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,19 +269,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3245315046545738421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Script: {fileID: 11500000, guid: 080ea145073a18e48848a4c3d10d593e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mIngrediente: 1
---- !u!114 &4716154404261189461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3245315046545738421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bc2c2cfa18f3d42ac0a3e6d376e1d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  mIngredienteEnum: 1

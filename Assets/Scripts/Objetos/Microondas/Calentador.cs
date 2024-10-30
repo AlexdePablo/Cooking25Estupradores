@@ -24,6 +24,7 @@ public class Calentador : FusionadorDeIngredientes
         if (!_puertaCerrada)
         {
             mIngredientesDentro.Clear();
+            mIngredienteDentroPorSeparado.Clear();
             mRecetaActual = -1;
             if (mCoroutineCooking != null)
                 StopCoroutine(mCoroutineCooking);
@@ -38,10 +39,12 @@ public class Calentador : FusionadorDeIngredientes
             if (EstaElIngrediente(ingrediente.eIngrediente))
             {
                 AumentarCantidadDeDentro(ingrediente);
+                mIngredienteDentroPorSeparado.Add(other.gameObject);
             }
             else
             {
                 mIngredientesDentro.Add(new IngredienteCantidad(ingrediente, 1));
+                mIngredienteDentroPorSeparado.Add(other.gameObject);
             }
 
             mRecetaActual = EncontrarReceta();

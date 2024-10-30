@@ -12,10 +12,12 @@ public class BoteEcs : FusionadorDeIngredientes
             if (EstaElIngrediente(ingrediente.eIngrediente))
             {
                 AumentarCantidadDeDentro(ingrediente);
+                mIngredienteDentroPorSeparado.Add(other.gameObject);
             }
             else
             {
                 mIngredientesDentro.Add(new IngredienteCantidad(ingrediente, 1));
+                mIngredienteDentroPorSeparado.Add(other.gameObject);
             }
 
             mRecetaActual = EncontrarReceta();
@@ -31,6 +33,7 @@ public class BoteEcs : FusionadorDeIngredientes
     private void OnDisable()
     {
         mIngredientesDentro.Clear();
+        mIngredienteDentroPorSeparado.Clear();
         if (mCoroutineCooking != null)
         {
             mTrabajando = false;

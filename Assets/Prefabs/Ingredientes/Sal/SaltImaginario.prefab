@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 4161472578995963247}
   - component: {fileID: 7853589647400413432}
   - component: {fileID: 2678458948891335630}
-  - component: {fileID: 1346078520923187853}
-  - component: {fileID: 1502418170087304227}
+  - component: {fileID: -1142134100389961199}
   m_Layer: 0
   m_Name: SaltImaginario
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -261,7 +260,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &1346078520923187853
+--- !u!114 &-1142134100389961199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,19 +269,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4671144910608835395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bc2c2cfa18f3d42ac0a3e6d376e1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 080ea145073a18e48848a4c3d10d593e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1502418170087304227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671144910608835395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mIngrediente: 5
+  mIngredienteEnum: 5

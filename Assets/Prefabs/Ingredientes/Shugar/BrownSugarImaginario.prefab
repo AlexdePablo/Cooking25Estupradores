@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 6036384627644074788}
   - component: {fileID: 21862858924186425}
   - component: {fileID: -105551049806688685}
-  - component: {fileID: 4600383417257780355}
-  - component: {fileID: 1635487672238180978}
+  - component: {fileID: 4214010139625233989}
   m_Layer: 3
   m_Name: BrownSugarImaginario
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -262,7 +261,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &4600383417257780355
+--- !u!114 &4214010139625233989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,19 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6834043178945908919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f725b20ee46db438b3123ebf3e7d50, type: 3}
+  m_Script: {fileID: 11500000, guid: 080ea145073a18e48848a4c3d10d593e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mIngrediente: 3
---- !u!114 &1635487672238180978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6834043178945908919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bc2c2cfa18f3d42ac0a3e6d376e1d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  mIngredienteEnum: 3
