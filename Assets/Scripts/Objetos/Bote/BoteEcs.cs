@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class BoteEcs : FusionadorDeIngredientes
 {
+    protected new void Start()
+    {
+        onCocinadoEnd += Finish;
+    }
+
+    private void Finish()
+    {
+        print("Termine");
+        mIngredientesDentro.Clear();
+        mIngredienteDentroPorSeparado.Clear();
+        if (mCoroutineCooking != null)
+        {
+            mTrabajando = false;
+            StopCoroutine(mCoroutineCooking);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
 

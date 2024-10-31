@@ -13,6 +13,8 @@ public class FusionadorDeIngredientes : MonoBehaviour
     protected bool mTrabajando;
     protected Coroutine mCoroutineCooking;
 
+    public Action onCocinadoEnd;
+
     protected virtual void Start()
     {
         mRecetaActual = -1;
@@ -104,6 +106,7 @@ public class FusionadorDeIngredientes : MonoBehaviour
 
         GameObject cooked = Instantiate(mRecetas[mRecetaActual].ingredienteResultante);
         cooked.transform.position = transform.position;
+        onCocinadoEnd?.Invoke();
     }
 
     protected void AumentarCantidadDeDentro(Ingredient ingredient)

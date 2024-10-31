@@ -3,18 +3,33 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class Calentador : FusionadorDeIngredientes
 {
     private Light mLight;
     [SerializeField] private PuertaMicroondasScript mPuerta;
+    private AudioSource mAudioSource;
+
+    [SerializeField] private AudioClip mMicrowaveEnds;
+    [SerializeField] private AudioClip mMicrowaveWorks;
 
     protected override void Start()
     {
         base.Start();
         mPuerta.OnDoorClosed += CerrarPuerta;
         mLight = GetComponent<Light>();
+        mAudioSource = transform.parent.GetComponent<AudioSource>();
+        onCocinadoEnd += Finish;
+    }
+
+    private void Finish()
+    {
+        print("Termine");
+        CerrarPuerta(false);
+        mAudioSource.clip = mMicrowaveEnds;
+        mAudioSource.Play();
     }
 
     private void CerrarPuerta(bool _puertaCerrada)
@@ -28,6 +43,8 @@ public class Calentador : FusionadorDeIngredientes
             mRecetaActual = -1;
             if (mCoroutineCooking != null)
                 StopCoroutine(mCoroutineCooking);
+
+            mAudioSource.Stop();
         }
     }
 
@@ -50,7 +67,11 @@ public class Calentador : FusionadorDeIngredientes
             mRecetaActual = EncontrarReceta();
 
             if (mRecetaActual != -1)
+            {
+                mAudioSource.clip = mMicrowaveWorks;
+                mAudioSource.Play();
                 Cocinar();
+            }
         }
     }
 

@@ -3,15 +3,16 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlatoBuenoScript : MonoBehaviour
 {
     [SerializeField] private GameObject mBrownieCrudo;
-    private GameObject mBrownieCrudoRefe;
     [SerializeField] private GameObject mBrownieMierda;
-    private GameObject mBrownieMierdaRefe;
     [SerializeField] private GameObject mBrownieMaking;
     private GameObject mBrownieMakingRefe;
+
+    [SerializeField] private List<Toggle> mToggles;
 
     [SerializeField] protected RecetaFinal mRecetaFinal;
 
@@ -23,6 +24,15 @@ public class PlatoBuenoScript : MonoBehaviour
     void Start()
     {
         mIngredienteActual = 0;
+        DesactivaToggles();
+    }
+
+    private void DesactivaToggles()
+    {
+        foreach (Toggle tog in mToggles)
+        {
+            tog.isOn = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +41,7 @@ public class PlatoBuenoScript : MonoBehaviour
         {
             if (ingrediente.eIngrediente == mRecetaFinal.ingredientes[mIngredienteActual].eIngredient)
             {
+                mToggles[mIngredienteActual].isOn = true;
                 if (mIngredienteActual == 0)
                 {
                     print("empezamos");
@@ -53,6 +64,9 @@ public class PlatoBuenoScript : MonoBehaviour
                         Destroy(other.gameObject);
                     mIngredienteActual = 0;
                     onFalloCocina?.Invoke();
+                    GameObject brownie = Instantiate(mBrownieCrudo);
+                    brownie.transform.position = transform.position;
+                    DesactivaToggles();
                 }
                 else
                 {
@@ -66,6 +80,7 @@ public class PlatoBuenoScript : MonoBehaviour
             }
             else
             {
+                DesactivaToggles();
                 mIngredienteActual = 0;
                 print("Cagaste");
                 if (TryGetComponent<Pooleable>(out Pooleable pooleable))
