@@ -1,3 +1,4 @@
+using Logic;
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -16,7 +17,7 @@ public class PlatoSpawnerScript : MonoBehaviour
     private void SpawnItem()
     {
         GameObject ingredient = mPool.GetElement();
-        ingredient.transform.localPosition = new Vector3(Random.Range(-1f, 1f), 3, Random.Range(-1f, 1f));//transform.position;
+        ingredient.transform.localPosition = new Vector3(Random.Range(-.3f, .3f), .3f, Random.Range(-.3f, .3f));
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

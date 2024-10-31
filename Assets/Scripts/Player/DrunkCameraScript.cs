@@ -138,6 +138,7 @@ public class DrunkCameraScript : MonoBehaviour
                 StopCoroutine(mCoroutineMarihuaned);
                 mCoroutineMarihuaned = StartCoroutine(GetMarihuaned());
             }
+            Destroy(other.gameObject);
         }
     }
 

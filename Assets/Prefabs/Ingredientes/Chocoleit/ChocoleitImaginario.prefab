@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5906684994120208228}
   - component: {fileID: 410217610124229197}
   - component: {fileID: -5224351727087445793}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ChocoleitImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}

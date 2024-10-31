@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4709712821113745355}
   - component: {fileID: -3484846669685950883}
   - component: {fileID: 7605687196915003702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EcsBAtidosprefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

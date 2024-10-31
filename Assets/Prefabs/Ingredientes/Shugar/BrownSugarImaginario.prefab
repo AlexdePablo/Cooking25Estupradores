@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 21862858924186425}
   - component: {fileID: -105551049806688685}
   - component: {fileID: 4214010139625233989}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BrownSugarImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}

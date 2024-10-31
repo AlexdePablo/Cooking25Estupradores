@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5071133203349034862}
   - component: {fileID: -5023570017481137806}
   - component: {fileID: 7751612857987814409}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: EggImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}

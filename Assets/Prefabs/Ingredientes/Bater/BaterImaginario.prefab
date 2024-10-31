@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9169196686995999557}
   - component: {fileID: -4227394312422038608}
   - component: {fileID: 1697749859882126588}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BaterImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}

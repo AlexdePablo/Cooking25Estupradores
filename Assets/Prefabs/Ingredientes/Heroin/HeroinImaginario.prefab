@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4639960914960365558}
   - component: {fileID: 3208970767201990004}
   - component: {fileID: 2902067508767125625}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: HeroinImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}

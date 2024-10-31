@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4323478041570306335}
   - component: {fileID: 4482636896437467044}
   - component: {fileID: 636252463377986250}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BrownieCrudoprefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

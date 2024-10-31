@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6008514951963561621}
   - component: {fileID: 3736294880378444834}
   - component: {fileID: -7505808419706399794}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: CogolloImaginario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 8847276856049004382}
   - component: {fileID: 1822727038579376481}
   - component: {fileID: 6719046951817769596}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 5634652012689392270}
   - component: {fileID: 5806013629451520577}
   - component: {fileID: 3753743726736589046}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LongHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}

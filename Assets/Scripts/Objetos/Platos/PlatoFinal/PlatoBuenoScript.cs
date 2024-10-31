@@ -37,8 +37,9 @@ public class PlatoBuenoScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<Ingredient>(out Ingredient ingrediente))
+        if (other.gameObject.TryGetComponent<Ingredient>(out Ingredient ingrediente) && other.gameObject.layer.Equals(LayerMask.NameToLayer("Alimentos")))
         {
+            print(ingrediente.eIngrediente  + " " + mRecetaFinal.ingredientes[mIngredienteActual].eIngredient);
             if (ingrediente.eIngrediente == mRecetaFinal.ingredientes[mIngredienteActual].eIngredient)
             {
                 mToggles[mIngredienteActual].isOn = true;
@@ -54,7 +55,7 @@ public class PlatoBuenoScript : MonoBehaviour
 
                     mIngredienteActual++;
                 }
-                if (mIngredienteActual == mRecetaFinal.ingredientes.Count - 1)
+                else if (mIngredienteActual == mRecetaFinal.ingredientes.Count - 1)
                 {
                     print("Sacabo");
                     if (TryGetComponent<Pooleable>(out Pooleable pooleable))
