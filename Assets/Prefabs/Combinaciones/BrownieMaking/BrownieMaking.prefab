@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8878364081254623574}
   - component: {fileID: 9118029140081059226}
   - component: {fileID: 4865782308517340229}
-  - component: {fileID: 7495432676692246787}
   m_Layer: 3
   m_Name: BrownieMaking
   m_TagString: Untagged
@@ -109,15 +108,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7495432676692246787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6177401148276049824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190f6722c65de5641b0248231d4890b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

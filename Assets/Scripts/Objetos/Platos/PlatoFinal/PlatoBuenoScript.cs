@@ -46,7 +46,6 @@ public class PlatoBuenoScript : MonoBehaviour
                 {
                     print("empezamos");
                     mBrownieMakingRefe = Instantiate(mBrownieMaking);
-                    mBrownieMakingRefe.GetComponent<BrownieMakingScript>().PasarPlato(gameObject);
                     mBrownieMakingRefe.transform.position = transform.position;
                     if(TryGetComponent<Pooleable>(out Pooleable pooleable))
                         pooleable.ReturnToPool();
@@ -63,7 +62,7 @@ public class PlatoBuenoScript : MonoBehaviour
                     else
                         Destroy(other.gameObject);
                     mIngredienteActual = 0;
-                    onFalloCocina?.Invoke();
+                    Destroy(mBrownieMakingRefe);
                     GameObject brownie = Instantiate(mBrownieCrudo);
                     brownie.transform.position = transform.position;
                     DesactivaToggles();
@@ -87,7 +86,7 @@ public class PlatoBuenoScript : MonoBehaviour
                     pooleable.ReturnToPool();
                 else
                     Destroy(other.gameObject);
-                onFalloCocina?.Invoke();
+                Destroy(mBrownieMakingRefe);
                 GameObject mielda = Instantiate(mBrownieMierda);
                 mielda.transform.position = transform.position;
             }

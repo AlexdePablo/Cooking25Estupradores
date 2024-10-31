@@ -25,7 +25,7 @@ public class PlatoSpawnerScript : MonoBehaviour
         for(int i = 0; i < mIngredientsToSpawn; i++)
         {
             GameObject ingredient = mPool.GetElement();
-            ingredient.transform.localPosition = new Vector3(Random.Range(-1f, 1f), 3, Random.Range(-1f, 1f));//transform.position;
+            ingredient.transform.localPosition = new Vector3(Random.Range(-.3f, .3f), .3f, Random.Range(-.3f, .3f));//transform.position;
         }
     }
 }
